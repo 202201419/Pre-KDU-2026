@@ -67,22 +67,22 @@ QUERY 5: <br>
 3.Run EXPLAIN ANALYZE again and compare the execution time<br>
 4.Write 2-3 sentences explaining: Why did the index improve (or not improve) performance?<br>
 EXPLAIN ANALYZE<br>
-SELECT <br>
+select <br>
     c.content_id,<br>
     c.title,<br>
     ca.category_name<br>
-FROM content c<br>
-JOIN category ca ON c.category_id = ca.category_id;<br>
+from content c<br>
+join category ca on c.category_id = ca.category_id;<br>
 <img width="1574" height="319" alt="Screenshot 2025-12-01 111600" src="https://github.com/user-attachments/assets/88e866e3-4add-4108-9df2-b6905bf8abf6" /><br>
 
 CREATE INDEX idx_category_id ON content(category_id);<br>
 EXPLAIN ANALYZE<br>
-SELECT <br>
+select <br>
     c.content_id,<br>
     c.title,<br>
     ca.category_name<br>
-FROM content c<br>
-JOIN category ca ON c.category_id = ca.category_id;<br>
+from content c<br>
+join category ca on c.category_id = ca.category_id;<br>
 <img width="1630" height="305" alt="Screenshot 2025-12-01 111706" src="https://github.com/user-attachments/assets/c036b997-36ac-45d9-84d9-788dbd89d159" /><br>
 
 The execution time after indexing reduces.<br>
@@ -112,5 +112,6 @@ Even after a power breakdown, a saved database should reflect updations made bef
 
 Q3. Why would we create an index on category_id?<br>
 As category_id is a foreign key here, indexing on it helps fetch results for queries on multiple attributes faster.
+
 
 
