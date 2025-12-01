@@ -85,7 +85,7 @@ from content c<br>
 join category ca on c.category_id = ca.category_id;<br>
 <img width="1630" height="305" alt="Screenshot 2025-12-01 111706" src="https://github.com/user-attachments/assets/c036b997-36ac-45d9-84d9-788dbd89d159" /><br>
 
-The execution time after indexing increases a bit(maybe because if smaller dataset).<br>
+The execution time after indexing increases a bit(maybe because of smaller dataset).<br>
 So after creating index on category_id, the database was able to perform the JOIN using indexing rather than scanning the full content table row by row.<br>
 This should reduce the number of row comparisons, so EXPLAIN ANALYZE should show faster execution. <br>
 
@@ -112,6 +112,7 @@ Even after a power breakdown, a saved database should reflect updations made bef
 
 Q3. Why would we create an index on category_id?<br>
 As category_id is a foreign key here, indexing on it helps fetch results for queries on multiple attributes faster.
+
 
 
 
