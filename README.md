@@ -1,9 +1,9 @@
--- Categories table
+-- Categories table<br>
 CREATE TABLE category (
     category_id SERIAL PRIMARY KEY,
     category_name VARCHAR(100) NOT NULL,
     description TEXT
-);
+);<br>
 
 -- Content table
 CREATE TABLE content (
@@ -112,3 +112,4 @@ Even after a power breakdown, a saved database should reflect updations made bef
 
 Q3. Why would we create an index on category_id?
 As category_id is a foreign key here, indexing on it helps fetch results for queries on multiple attributes faster.
+
