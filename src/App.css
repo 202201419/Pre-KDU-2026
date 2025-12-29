@@ -1,0 +1,193 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #f1f1f1;
+}
+
+.carousel-wrapper {
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.heading {
+  margin-bottom: 24px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-left: 2%;
+}
+
+.movie-card {
+  background: linear-gradient(135deg, #3e424a, #2c2f35);
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  margin-bottom: 30px;
+  margin-left: 2%;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #d0d0d0;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: rgba(255,255,255,0.55);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: rgba(255,255,255,0.35);
+  background-color: rgba(255,255,255,0.12);
+}
+
+.add-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f0c400;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.add-btn:hover {
+  background-color: #e6bb00;
+  transform: translateY(-1px);
+}
+
+.list-section {
+  padding: 20px;
+  border-radius: 14px;
+  background-color: rgba(255,255,255,0.06);
+  color: white;
+}
+
+.list-section h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.empty-text {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.main-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin: 40px 2%;
+}
+
+.movie-card {
+  flex: 1;   
+}
+
+.list-section {
+  flex: 1;   
+  min-height: 200px;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff6b6b;
+}
+
+.search-bar {
+  margin-bottom: 12px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.08);
+  color: white;
+  outline: none;  
+}
+
+.search-bar input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.thin-search {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+
+  margin: 0px 0 16px;
+  padding: 10px 12px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+
+  background-color: rgba(255,255,255,0.08);
+  color: white;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.watchlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.clear-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.clear-btn:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
