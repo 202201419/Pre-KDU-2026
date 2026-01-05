@@ -31,7 +31,7 @@ function completeSession() {
 function timeralgo() {
     if (sec === 0) {
         completeSession();
-        // {newpage};
+        alert("movie watched");
     }
 
     else {
@@ -64,4 +64,5 @@ function resetTimer() {
 
 updateDisplay();
 timerId = setInterval(timeralgo, 1000);
+
 }
