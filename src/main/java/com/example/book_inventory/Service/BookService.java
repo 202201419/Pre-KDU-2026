@@ -3,12 +3,14 @@ package com.example.book_inventory.Service;
 import com.example.book_inventory.Book;
 import com.example.book_inventory.Repository.BookRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
+
+import java.util.List;
 
 @Service
 public class BookService {
 
     private final BookRepository bookRepository;
-
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
@@ -49,10 +51,26 @@ public class BookService {
         Book book = bookRepository.findbyAuthorandTitle(author,title);
 
         if (book == null) {
-            throw new IllegalArgumentException("Book named "+title+" not found by: " + author);
+            throw new IllegalArgumentException("Book named "+title+" by: " + author+" not found");
         }
 
         return book;
     }
 
+    public List<Book> getBooks(){
+        List<Book> books= bookRepository.getAllBooks();
+        return books;
+    }
+
+    public void deletebook(Book book){
+        bookRepository.deletebyid(book);
+    }
+
+    public List<Book> getBookbyAuthor(String author){
+        List<Book> books= bookRepository.getAllBooksbyAuthor(author.toLowerCase());
+        if(books==null){
+            throw new IllegalArgumentException("No book by author: "+author);
+        }
+        return books;
+    }
 }
